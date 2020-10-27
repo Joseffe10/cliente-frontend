@@ -46,7 +46,7 @@ export default class Main extends Component {
                                 <th scope="row">{usuario.id}</th>
                                 <td>{usuario.nome}</td>
                                 <td>{usuario.salario.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
-                                <td>{new Date(usuario.dataNascimento).toLocaleDateString('pt-BR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</td>
+                                <td>{new Date(usuario.dataNascimento).toLocaleDateString('pt-BR', { year: 'numeric', month: '2-digit', day: '2-digit', timeZone: 'UTC' })}</td>
                                 <td>{usuario.ativo ? "Sim" : "Não"}</td>
                                 <td> <Link to={`/usuarios/${usuario.id}`}> <button type="button" class="btn btn-primary">Detalhes</button> </Link> </td>
                                 <td> <Link to={`/editarUsuario/${usuario.id}`}> <button type="button" class="btn btn-warning">Atualizar</button> </Link></td>
